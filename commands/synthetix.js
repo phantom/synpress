@@ -1,7 +1,10 @@
 const { SynthetixJs } = require('synthetix-js');
 const { synthetix } = require('@synthetixio/js');
 const { getNetwork } = require('../helpers');
-const metamask = require('./metamask');
+const metamask =
+  process.env.PROVIDER === 'phantom'
+    ? require('./phantom')
+    : require('./metamask');
 const bytes32 = require('bytes32');
 const sleep = require('util').promisify(setTimeout);
 
