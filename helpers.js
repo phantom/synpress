@@ -57,7 +57,7 @@ module.exports = {
   },
   getSynpressPath() {
     if (process.env.SYNPRESS_LOCAL_TEST) {
-      return '.';
+      return './node_modules/@phantom/synpress';
     } else {
       return path.dirname(require.resolve(packageJson.name));
     }
@@ -205,7 +205,7 @@ module.exports = {
       }
     }
   },
-  download: async (url, destination) => {
+  download: async (provider, url, destination) => {
     try {
       log(
         `Trying to download and extract file from: ${url} to following path: ${destination}`,
@@ -222,7 +222,9 @@ module.exports = {
         /**
          * Some extensions will zip their dist folder
          */
-        await moveFiles(`${destination}/dist`, destination);
+        if (provider === 'phantom') {
+          await moveFiles(`${destination}/dist`, destination);
+        }
       } else {
         await download(url, destination, {
           extract: true,
@@ -234,9 +236,9 @@ module.exports = {
       );
     }
   },
-  prepareProvider: async version => {
+  prepareProvider: async (provider, version) => {
     const release =
-      process.env.PROVIDER === 'phantom'
+      provider === 'phantom'
         ? await module.exports.getPhantomReleases(version)
         : await module.exports.getMetamaskReleases(version);
     const downloadsDirectory = path.resolve(__dirname, 'downloads');
@@ -254,7 +256,11 @@ module.exports = {
       providerManifestFilePath,
     );
     if (!providerkDirectoryExists && !providerManifestFileExists) {
-      await module.exports.download(release.downloadUrl, providerDirectory);
+      await module.exports.download(
+        provider,
+        release.downloadUrl,
+        providerDirectory,
+      );
     } else {
       log('provider is already downloaded');
     }
