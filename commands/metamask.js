@@ -1305,6 +1305,7 @@ const metamask = {
     password,
     enableAdvancedSettings,
     enableExperimentalSettings,
+    playwrightInstance,
   }) {
     const isCustomNetwork =
       (process.env.NETWORK_NAME &&
@@ -1312,7 +1313,7 @@ const metamask = {
         process.env.CHAIN_ID) ||
       typeof network == 'object';
 
-    await playwright.init();
+    await playwright.init(playwrightInstance);
     await playwright.assignWindows(PROVIDER);
     await playwright.assignActiveTabName(PROVIDER);
     await module.exports.getExtensionDetails();
