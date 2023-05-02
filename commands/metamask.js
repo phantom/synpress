@@ -728,7 +728,7 @@ const metamask = {
     const notificationPage = await playwright.switchToNotification(PROVIDER);
     if (
       await playwright
-        .notificationwindows(PROVIDER)
+        .windows(PROVIDER)
         .locator(signaturePageElements.signatureRequestScrollDownButton)
         .isVisible()
     ) {
@@ -760,7 +760,7 @@ const metamask = {
     const notificationPage = await playwright.switchToNotification(PROVIDER);
     if (
       await playwright
-        .notificationwindows(PROVIDER)
+        .windows(PROVIDER)
         .locator(signaturePageElements.signatureRequestScrollDownButton)
         .isVisible()
     ) {
@@ -880,7 +880,7 @@ const metamask = {
     // experimental mode on
     if (
       await playwright
-        .notificationwindows(PROVIDER)
+        .windows(PROVIDER)
         .locator(notificationPageElements.customSpendingLimitInput)
         .isVisible()
     ) {
@@ -955,7 +955,7 @@ const metamask = {
       );
       if (
         await playwright
-          .notificationwindows(PROVIDER)
+          .windows(PROVIDER)
           .locator(confirmPageElements.editGasFeeLegacyButton)
           .isVisible()
       ) {
@@ -969,7 +969,7 @@ const metamask = {
           );
           if (
             await playwright
-              .notificationwindows(PROVIDER)
+              .windows(PROVIDER)
               .locator(confirmPageElements.editGasFeeLegacyOverrideAckButton)
               .isVisible()
           ) {
@@ -1092,7 +1092,7 @@ const metamask = {
     log('[confirmTransaction] Checking if recipient address is present..');
     if (
       await playwright
-        .notificationwindows(PROVIDER)
+        .windows(PROVIDER)
         .locator(confirmPageElements.recipientButton)
         .isVisible()
     ) {
@@ -1116,7 +1116,7 @@ const metamask = {
     log('[confirmTransaction] Checking if network name is present..');
     if (
       await playwright
-        .notificationwindows(PROVIDER)
+        .windows(PROVIDER)
         .locator(confirmPageElements.networkLabel)
         .isVisible()
     ) {
@@ -1138,7 +1138,7 @@ const metamask = {
     // log('[confirmTransaction] Checking if tx data is present..');
     // if (
     //   await playwright
-    //     .notificationwindows(PROVIDER)
+    //     .windows(PROVIDER)
     //     .locator(confirmPageElements.dataButton)
     //     .isVisible()
     // ) {
