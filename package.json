@@ -22,7 +22,6 @@
   "author": {
     "name": "Synthetix"
   },
-  "private": true,
   "type": "commonjs",
   "main": "launcher.js",
   "bin": "synpress.js",
