@@ -1,5 +1,11 @@
 # @phantom/synpress
 
+## 4.1.4
+
+### Patch Changes
+
+- 9fc093f: chore: Allow debug
+
 ## 4.1.3
 
 ### Patch Changes
