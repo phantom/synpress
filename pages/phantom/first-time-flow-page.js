@@ -16,7 +16,7 @@ module.exports.metametricsPageElements = {
 
 const firstTimeFlowPage = '.first-time-flow';
 const importWalletButton = `text=I already have a wallet`;
-const importRecoveryPhraseButton = `text=Recovery Phrase`;
+const importRecoveryPhraseButton = `text=Import Recovery Phrase`;
 const createWalletButton = `${firstTimeFlowPage} [data-testid="create-wallet-button"]`;
 module.exports.firstTimeFlowPageElements = {
   firstTimeFlowPage,
