@@ -1,5 +1,11 @@
 # @phantom/synpress
 
+## 4.1.3
+
+### Patch Changes
+
+- 4b6bdd1: Timeout to prevent too fast click
+
 ## 4.1.2
 
 ### Patch Changes
