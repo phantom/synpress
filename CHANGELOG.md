@@ -1,5 +1,11 @@
 # @phantom/synpress
 
+## 4.1.1
+
+### Patch Changes
+
+- 5aa71ca: public package
+
 ## 4.1.0
 
 ### Minor Changes
