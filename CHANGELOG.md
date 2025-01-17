@@ -1,5 +1,11 @@
 # @phantom/synpress
 
+## 4.1.2
+
+### Patch Changes
+
+- 96e7ce0: Fix import recovery phrase button locator
+
 ## 4.1.1
 
 ### Patch Changes
