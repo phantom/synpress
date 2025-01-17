@@ -1,6 +1,6 @@
 # Synpress
 
-- This is based of synpress
+- This is based of synpress, we might migrate of this in the future
 - This was heavily modified, not supposed to be "just" merged into upstream
   anymore
 - Synpress is integrating phantom themselves
