@@ -304,6 +304,12 @@ module.exports = {
 
     await playwright.switchToWindow(PROVIDER);
 
+    if (process.env.DEBUG != null) {
+      await playwright
+        .windows(PROVIDER)
+        .on('console', msg => console.log(msg.text()));
+    }
+
     const isImportButtonVisible = await playwright
       .windows(PROVIDER)
       .locator(firstTimeFlowPageElements.importWalletButton)
