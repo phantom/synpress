@@ -183,6 +183,7 @@ module.exports = {
       PROVIDER,
       firstTimeFlowImportPageElements.termsCheckbox,
     );
+    await new Promise(resolve => setTimeout(resolve, 400)); // This is so we are not clicking too fast
     // continue to next screen
     await playwright.waitAndClick(
       PROVIDER,
