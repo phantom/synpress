@@ -7,5 +7,5 @@
 
 ## Publishing
 
-- Prepare by logging in: `yarn npm login --publish --scope phantom`
-- Publish: `yarn npm publish`
+- Create a changeset `npx changeset` and specify what was changed
+- Commit this to `dev`
