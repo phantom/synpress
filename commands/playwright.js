@@ -274,7 +274,7 @@ module.exports = {
     } else if (retries >= 50) {
       retries = 0;
       throw new Error(
-        `[switchToNotification: ${provider}] Max amount of retries to switch to metamask notification window has been reached. It was never found.`,
+        `[switchToNotification: ${provider}] Max amount of retries to switch to ${provider} notification window has been reached. It was never found.`,
       );
     }
   },

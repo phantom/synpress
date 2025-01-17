@@ -414,7 +414,7 @@ module.exports = {
     const notificationPage = await playwright.switchToNotification(PROVIDER);
     await playwright.waitAndClick(
       PROVIDER,
-      transactionPageElements.buttons.rejectTransaction,
+      transactionPageElements.buttons.confirmTransaction,
       notificationPage,
       { waitForEvent: 'close' },
     );
