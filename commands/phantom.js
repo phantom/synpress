@@ -282,6 +282,53 @@ module.exports = {
     await switchToCypressIfNotActive();
     return walletAddress;
   },
+
+  /**
+   *
+   * @param {ChromiumBrowser} playwrightInstance The playwright instance
+   * @param {Object} walletState The wallet local storage state of the extension
+   * @param {Object} options Options
+   * @returns
+   */
+  async initialSetupFromWalletState(
+    playwrightInstance,
+    walletState,
+    { password },
+  ) {
+    await playwright.init(playwrightInstance);
+    await playwright.assignWindows(PROVIDER);
+    await playwright.assignActiveTabName(PROVIDER);
+    await module.exports.getExtensionDetails();
+    await playwright.fixBlankPage(
+      PROVIDER,
+      playwright.windows(PROVIDER),
+      app.root,
+    );
+
+    await playwright.switchToWindow(PROVIDER);
+
+    await playwright.windows(PROVIDER).evaluate(walletState => {
+      // eslint-disable-next-line no-undef
+      chrome.storage.local.set(walletState);
+    }, walletState);
+
+    await playwright
+      .windows(PROVIDER)
+      .goto(playwright.windows(PROVIDER).url().replace('onboarding', 'popup'));
+
+    await module.exports.unlock(password);
+    walletAddress = await module.exports.getWalletAddress();
+
+    // interstitials are triggered after locking/unlocking
+
+    // 1. lock the extension
+    await module.exports.lock();
+
+    // 3. unlock the extension
+    await module.exports.unlock(password);
+
+    return true;
+  },
   async initialSetup(
     playwrightInstance,
     {
@@ -303,12 +350,6 @@ module.exports = {
     );
 
     await playwright.switchToWindow(PROVIDER);
-
-    if (process.env.DEBUG != null) {
-      await playwright
-        .windows(PROVIDER)
-        .on('console', msg => console.log(msg.text()));
-    }
 
     const isImportButtonVisible = await playwright
       .windows(PROVIDER)
