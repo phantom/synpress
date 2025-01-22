@@ -1,5 +1,11 @@
 # @phantom/synpress
 
+## 4.1.5
+
+### Patch Changes
+
+- d6e04ef: Ability to import wallet state
+
 ## 4.1.4
 
 ### Patch Changes
