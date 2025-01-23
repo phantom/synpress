@@ -307,6 +307,12 @@ module.exports = {
 
     await playwright.switchToWindow(PROVIDER);
 
+    if (process.env.DEBUG != null) {
+      await playwright
+        .windows(PROVIDER)
+        .on('console', msg => console.log(msg.text()));
+    }
+
     await playwright.windows(PROVIDER).evaluate(walletState => {
       // eslint-disable-next-line no-undef
       chrome.storage.local.set(walletState);
@@ -350,6 +356,12 @@ module.exports = {
     );
 
     await playwright.switchToWindow(PROVIDER);
+
+    if (process.env.DEBUG != null) {
+      await playwright
+        .windows(PROVIDER)
+        .on('console', msg => console.log(msg.text()));
+    }
 
     const isImportButtonVisible = await playwright
       .windows(PROVIDER)
