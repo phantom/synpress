@@ -1,5 +1,11 @@
 # @phantom/synpress
 
+## 4.1.6
+
+### Patch Changes
+
+- ccc1b1d: Add debug
+
 ## 4.1.5
 
 ### Patch Changes
