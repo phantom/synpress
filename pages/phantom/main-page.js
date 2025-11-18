@@ -69,8 +69,7 @@ const settingsMenu = {
   settingsSidebarButton: '[data-testid="sidebar_menu-button-settings"]',
   settingsSidebarCloseButton: '[data-testid="settings-menu-close-button"]',
   settingsPreferencesButton: '[data-testid="settings-item-preferences"]',
-  experimentalSettingsRow:
-    '[data-testid="settings-item-experimental-features"]',
+  experimentalSettingsRow: '[id="settings-item-experimental-features"]',
   trustedAppsRow: '[data-testid="settings-item-trusted-apps"]',
   developerSettingsRow: '[data-testid="settings-item-developer-settings"]',
   defaultAppWalletRow: '[data-testid="settings-item-metamask-override"]',
@@ -88,6 +87,7 @@ const welcome = {
 
 const accountBar = {
   title: '[data-testid="home-header-account-name"]',
+  titleInteractiveContainer: '[data-testid="tooltip_interactive-wrapper"]',
   ethRow: '[data-testid="account-header-chain-eip155:1"]',
   solanaRow: '[data-testid="account-header-chain-solana:101"]',
   btcTaprootRow:
