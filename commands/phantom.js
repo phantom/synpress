@@ -246,7 +246,9 @@ module.exports = {
   },
   getWalletAddress: async (chain = 'eth') => {
     await switchToPhantomIfNotActive();
-    await playwright.windows(PROVIDER).hover(mainPageElements.accountBar.title);
+    await playwright
+      .windows(PROVIDER)
+      .hover(mainPageElements.accountBar.titleInteractiveContainer);
     await new Promise(resolve => setTimeout(resolve, 100));
 
     switch (chain) {
