@@ -1,5 +1,12 @@
 # @phantom/synpress
 
+## 4.1.7
+
+### Patch Changes
+
+- e40359e: chore: Make disconnecting dApp fail-safe
+- 5200856: fix commands
+
 ## 4.1.6
 
 ### Patch Changes
