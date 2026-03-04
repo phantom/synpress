@@ -651,10 +651,15 @@ module.exports = {
     const rowButtonLocator = await playwright
       .windows(PROVIDER)
       .locator(mainPageElements.connectedSites.rowButton);
-    await playwright
+
+    const hasConnectedSite = await playwright
       .windows(PROVIDER)
-      .waitForSelector(mainPageElements.connectedSites.rowButton);
-    const hasConnectedSite = await rowButtonLocator.isVisible();
+      .waitForSelector(mainPageElements.connectedSites.rowButton, {
+        state: 'visible',
+        timeout: 5000,
+      })
+      .then(() => rowButtonLocator.isVisible())
+      .catch(() => false);
 
     let isDisconnected = false;
     if (hasConnectedSite) {
