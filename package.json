@@ -109,7 +109,8 @@
     "gh-pages": "5.0.0",
     "http-cache-semantics": "4.1.1",
     "ansi-regex": "5.0.1",
-    "@testing-library/dom": "8.20.0"
+    "@testing-library/dom": "8.20.0",
+    "axios@<0.31.1": "0.31.1"
   },
   "overrides": {
     "lodash@<4.17.20": "4.17.20"
