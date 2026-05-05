@@ -99,8 +99,8 @@ dependencies:
     specifier: ^2.6.1
     version: 2.6.9
   underscore:
-    specifier: ^1.13.6
-    version: 1.13.6
+    specifier: ^1.13.8
+    version: 1.13.8
   unzip-crx-3:
     specifier: ^0.2.0
     version: 0.2.0
@@ -201,8 +201,8 @@ dependencies:
         specifier: ^2.6.1
         version: 2.6.9
       underscore:
-        specifier: ^1.13.6
-        version: 1.13.6
+        specifier: ^1.13.8
+        version: 1.13.8
       viem:
         specifier: ^1.6.0
         version: 1.6.0(typescript@5.0.4)
@@ -5514,8 +5514,8 @@ packages:
   unbzip2-stream@1.4.3:
     resolution: {integrity: sha512-mlExGW4w71ebDJviH16lQLtZS32VKqsSfk80GCfUlwT/4/hNRFsoscrF/c++9xinkMzECL1uL9DDwXqFWkruPg==}
 
-  underscore@1.13.6:
-    resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
+  underscore@1.13.8:
+    resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
 
   unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -12065,7 +12065,7 @@ snapshots:
       buffer: 5.7.1
       through: 2.3.8
 
-  underscore@1.13.6: {}
+  underscore@1.13.8: {}
 
   unicode-canonical-property-names-ecmascript@2.0.0: {}
 

@@ -76,7 +76,7 @@
     "find-config": "^1.0.0",
     "get-port": "^7.0.0",
     "node-fetch": "^2.6.1",
-    "underscore": "^1.13.6",
+    "underscore": "^1.13.8",
     "unzip-crx-3": "^0.2.0",
     "viem": "^1.6.0",
     "wait-on": "^7.0.1"
