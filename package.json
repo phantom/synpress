@@ -57,7 +57,7 @@
     "@types/testing-library__cypress": "^5.0.9",
     "@viem/anvil": "^0.0.6",
     "app-root-path": "^3.1.0",
-    "axios": "^1.4.0",
+    "axios": "^1.13.5",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-react-generate-property": "^1.1.2",
     "babel-plugin-react-remove-properties": "^0.3.0",
@@ -109,10 +109,12 @@
     "gh-pages": "5.0.0",
     "http-cache-semantics": "4.1.1",
     "ansi-regex": "5.0.1",
-    "@testing-library/dom": "8.20.0"
+    "@testing-library/dom": "8.20.0",
+    "axios": "^1.13.5"
   },
   "overrides": {
-    "lodash@<4.17.20": "4.17.20"
+    "lodash@<4.17.20": "4.17.20",
+    "axios": "^1.13.5"
   },
   "engines": {
     "node": ">=14"
